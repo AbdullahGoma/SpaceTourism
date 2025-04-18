@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Tourism</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&family=Barlow&family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="numbered-title"><span>01</span>Design System</h1>
+
+      <section class="flow" id="interactive-elements">
+        <h2 class="numbered-title"><span>03</span>Interactive Elements</h2>
+
+        <div>
+          <nav>
+            <ul class="primary-navigation underline-indicators flex">
+              <li class="active">
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>Active</span></a
+                >
+              </li>
+              <li>
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>Hoverd</span></a
+                >
+              </li>
+              <li>
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>Idle</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex">
+          <div style="margin-top: 5rem">
+            <a
+              href="#"
+              class="large-button uppercase ff-serif fs-600 text-dark bg-accent"
+              >Explore</a
+            >
+          </div>
+
+          <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem;">
+            <div class="flex tab-list underline-indicators">
+              <button
+                aria-selected="true"
+                class="uppercase ff-sans-cond text-accent letter-spacing-2 bg-dark"
+              >
+                Moon
+              </button>
+              <button
+                aria-selected="false"
+                class="uppercase ff-sans-cond text-accent letter-spacing-2 bg-dark"
+              >
+                Mars
+              </button>
+              <button
+                aria-selected="false"
+                class="uppercase ff-sans-cond text-accent letter-spacing-2 bg-dark"
+              >
+                Europa
+              </button>
+            </div>
+
+            <div class="flex dot-indicators">
+              <button aria-selected="true"><span class="sr-only">Slide Title</span></button>
+              <button aria-selected="false"><span class="sr-only">Slide Title</span></button>
+              <button aria-selected="false"><span class="sr-only">Slide Title</span></button>
+            </div>
+
+            <div class="grid numbers-indicators">
+              <button aria-selected="true">1</button>
+              <button aria-selected="false">2</button>
+              <button aria-selected="false">3</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>

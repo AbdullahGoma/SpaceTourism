@@ -3,89 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Space Tourism</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Bellefair&family=Barlow&family=Barlow+Condensed&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/index.css" />
+
+    <title>Space tourism</title>
   </head>
   <body>
-    <div class="container">
-      <h1 class="numbered-title"><span>01</span>Design System</h1>
+    <header class="primary-header flex">
+      <div>
+        <img src="./assets/shared/logo.svg" alt="space tourism logo" />
+      </div>
 
-      <section class="flow" id="interactive-elements">
-        <h2 class="numbered-title"><span>03</span>Interactive Elements</h2>
-
-        <div>
-          <nav>
-            <ul class="primary-navigation underline-indicators flex">
-              <li class="active">
-                <a class="uppercase text-white letter-spacing-2" href="#"
-                  ><span>Active</span></a
-                >
-              </li>
-              <li>
-                <a class="uppercase text-white letter-spacing-2" href="#"
-                  ><span>Hoverd</span></a
-                >
-              </li>
-              <li>
-                <a class="uppercase text-white letter-spacing-2" href="#"
-                  ><span>Idle</span></a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="flex">
-          <div style="margin-top: 5rem">
+      <nav>
+        <ul class="primary-navigation underline-indicators flex">
+          <li class="active">
             <a
-              href="#"
-              class="large-button uppercase ff-serif fs-600 text-dark bg-accent"
-              >Explore</a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="index.html"
+              ><span>00</span>Home</a
             >
-          </div>
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="destination.html"
+              ><span>01</span>Destination</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="crew.html"
+              ><span>02</span>Crew</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="technology.html"
+              ><span>03</span>Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-          <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem;">
-            <div class="flex tab-list underline-indicators">
-              <button
-                aria-selected="true"
-                class="uppercase ff-sans-cond text-accent letter-spacing-2 bg-dark"
-              >
-                Moon
-              </button>
-              <button
-                aria-selected="false"
-                class="uppercase ff-sans-cond text-accent letter-spacing-2 bg-dark"
-              >
-                Mars
-              </button>
-              <button
-                aria-selected="false"
-                class="uppercase ff-sans-cond text-accent letter-spacing-2 bg-dark"
-              >
-                Europa
-              </button>
-            </div>
+    <div class="container">
+      <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
+        So, you want to travel to
+        <span class="fs-900 ff-serif text-white">Space</span>
+      </h1>
 
-            <div class="flex dot-indicators">
-              <button aria-selected="true"><span class="sr-only">Slide Title</span></button>
-              <button aria-selected="false"><span class="sr-only">Slide Title</span></button>
-              <button aria-selected="false"><span class="sr-only">Slide Title</span></button>
-            </div>
+      <p>
+        Let’s face it; if you want to go to space, you might as well genuinely
+        go to outer space and not hover kind of on the edge of it. Well sit
+        back, and relax because we’ll give you a truly out of this world
+        experience!
+      </p>
 
-            <div class="grid numbers-indicators">
-              <button aria-selected="true">1</button>
-              <button aria-selected="false">2</button>
-              <button aria-selected="false">3</button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <a
+        href="#"
+        class="large-button uppercase ff-serif fs-600 text-dark bg-accent"
+        >Explore</a
+      >
     </div>
-
-    <script src="/index.js"></script>
   </body>
 </html>
