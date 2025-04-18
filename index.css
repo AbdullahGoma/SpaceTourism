@@ -102,7 +102,6 @@
     outline: 1px solid green;
   }
 
-
   .grid {
     display: grid;
     gap: var(--gap, 1rem);
@@ -111,7 +110,6 @@
   .d-block {
     display: block;
   }
-
 
   /* .flow > * + * */
   .flow > *:where(:not(:first-child)) {
@@ -127,7 +125,6 @@
 
   .grid-container {
     text-align: center;
-    border: 1px solid limegreen;
     display: grid;
     place-items: center;
     /* place-content: center;
@@ -151,12 +148,10 @@
 
     .grid-container > *:first-child {
       grid-column: 2;
-      outline: 1px solid red;
     }
 
     .grid-container > *:last-child {
       grid-column: 3;
-      outline: 1px solid yellow;
     }
 
     .grid-container--home {
@@ -164,14 +159,6 @@
       align-items: end;
     }
   }
-
-  .grid-container > *:first-child {
-      outline: 1px solid red;
-    }
-
-    .grid-container > *:last-child {
-      outline: 1px solid yellow;
-    }
 
   /* screen readers */
   .sr-only {
@@ -428,6 +415,32 @@
     .numbers-indicators > [aria-selected="true"]:focus::after {
       opacity: 1;
       transform: scale(1.5);
+    }
+  }
+}
+
+@layer page-specific-bg {
+  body {
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  @layer home {
+    .home {
+      background-image: url(./assets/home/background-home-mobile.jpg);
+    }
+
+    @media (min-width: 35rem) {
+      .home {
+        background-position: center center;
+        background-image: url(./assets/home/background-home-tablet.jpg);
+      }
+    }
+
+    @media (min-width: 45rem) {
+      .home {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+      }
     }
   }
 }
