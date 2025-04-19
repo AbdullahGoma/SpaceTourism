@@ -333,12 +333,13 @@
         transform: translateX(100%);
       }
 
-      .primary-navigation.underline-indicators > .active {
-        border: 0;
+      .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
       }
 
       /* handle button in mobile  */
       .mobile-nav-toggle {
+        cursor: pointer;
         display: block;
         position: absolute;
         z-index: 1001;
@@ -348,7 +349,7 @@
         background-image: url(./assets/shared/icon-hamburger.svg);
         background-repeat: no-repeat;
         width: 1.5rem;
-        aspect-ratio: 1;;
+        aspect-ratio: 1;
         border: 0;
       }
     }
@@ -370,15 +371,22 @@
         border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
       }
 
-      .underline-indicators > *:hover,
       .underline-indicators > *:focus {
         border-color: hsl(var(--clr-white) / 0.5);
       }
 
-      .underline-indicators > .active,
-      .underline-indicators > [aria-selected="true"] {
-        color: hsl(var(--clr-white) / 1);
-        border-color: hsl(var(--clr-white) / 1);
+      @media (hover: hover) {
+        .underline-indicators > *:hover {
+          border-color: hsl(var(--clr-white) / 0.5);
+        }
+      }
+
+      @media (min-width: 35rem) {
+        .underline-indicators > .active,
+        .underline-indicators > [aria-selected="true"] {
+          color: hsl(var(--clr-white) / 1);
+          border-color: hsl(var(--clr-white) / 1);
+        }
       }
     }
 
