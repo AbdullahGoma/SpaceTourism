@@ -1,8 +1,8 @@
-const nav = document.querySelector('.primary-navigation');
-const navToggle = document.querySelector('.mobile-nav-toggle');
+const nav = document.querySelector(".primary-navigation");
+const navToggle = document.querySelector(".mobile-nav-toggle");
 const srOnly = navToggle.querySelector(".sr-only");
 
-navToggle.addEventListener('click', (e) => {
+navToggle.addEventListener("click", (e) => {
   // const visibility = nav.getAttribute("data-visible");
   // if (visibility === "false") {
   //     nav.setAttribute("data-visible", true);
@@ -21,16 +21,23 @@ navToggle.addEventListener('click', (e) => {
 });
 
 // Click outside to close
-window.addEventListener('click', (e) => {
+window.addEventListener("click", (e) => {
   const isVisible = nav.getAttribute("data-visible") === "true";
 
-  if (
-    isVisible &&
-    !nav.contains(e.target) &&
-    !navToggle.contains(e.target)
-  ) {
+  if (isVisible && !nav.contains(e.target) && !navToggle.contains(e.target)) {
     nav.setAttribute("data-visible", "false");
     navToggle.setAttribute("aria-expanded", "false");
     srOnly.textContent = "Menu";
   }
 });
+
+// stop-animation-fire-swap to mobile
+const resizeObserver = new ResizeObserver(() => {
+  document.body.classList.add("resizing");
+
+  requestAnimationFrame(() => {
+    document.body.classList.remove("resizing");
+  });
+});
+
+resizeObserver.observe(document.body);

@@ -180,7 +180,7 @@
     z-index: 1000;
     background: hsl(var(--clr-white));
     color: hsl(var(--clr-dark));
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     margin-inline: auto;
     transform: translateY(-100%);
     transition: transform 250ms ease-in;
@@ -374,7 +374,6 @@
         border: 0;
       }
 
-      
       .primary-navigation {
         --underline-gap: 0.5rem;
         position: fixed;
@@ -404,7 +403,7 @@
     }
 
     @media (min-width: 35em) {
-       .primary-navigation {
+      .primary-navigation {
         padding-inline: clamp(3rem, 7vw, 7rem);
       }
     }
@@ -417,13 +416,13 @@
 
     @media (min-width: 45em) {
       .primary-header::after {
-        content: '';
+        content: "";
         display: block;
         position: relative;
         height: 1px;
         width: 100%;
         margin-right: -2.5rem;
-        background: hsl(var(--clr-white) / .25);
+        background: hsl(var(--clr-white) / 0.25);
         order: 1;
       }
 
@@ -572,5 +571,12 @@
         background-image: url(./assets/home/background-home-desktop.jpg);
       }
     }
+  }
+}
+
+@layer stop-animation-fire-swap {
+  .resizing * {
+    transition: none;
+    animation-play-state: paused;
   }
 }
