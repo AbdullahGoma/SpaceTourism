@@ -620,6 +620,14 @@
         "content";
     }
 
+    .technology-lg-screen {
+      display: none;
+    }
+
+    .technology-md-screen {
+      display: block;
+    }
+
     .grid-container--technology .numbered-title {
       padding-inline: 1rem;
     }
@@ -627,14 +635,13 @@
     .grid-container--technology > picture {
       grid-area: image;
       max-width: 100%;
-      border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
     }
 
     .grid-container--technology > .numbers-indicators {
       grid-area: tabs;
     }
 
-    .grid-container--crew > .crew-info {
+    .grid-container--technology > .technology-info {
       grid-area: content;
 
       h2 {
@@ -729,6 +736,39 @@
         height: 70vh;
         width: 100%;
         object-fit: contain;
+      }
+
+      /* technology */
+      .grid-container--technology > .numbers-indicators {
+        flex-direction: column;
+        margin-left: 10rem;
+      }
+
+      .grid-container--technology {
+        justify-content: space-between;
+        grid-template-areas:
+          ". title title ."
+          "tabs content image image"
+          "tabs content image image";
+      }
+
+      .grid-container--technology > .technology-info {
+        margin-left: 10rem;
+      }
+
+      .grid-container--technology > picture {
+        justify-self: end;
+        align-self: end;
+        height: auto; 
+        object-fit: contain; 
+      }
+
+      .technology-md-screen {
+        display: none;
+      }
+
+      .technology-lg-screen {
+        display: block;
       }
     }
   }
