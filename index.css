@@ -10,7 +10,7 @@
     --fs-800: clamp(3.5rem, 6vw + 0.5rem, 6.25rem);
     --fs-700: clamp(1.5rem, 4vw + 0.5rem, 3.5rem);
     --fs-600: clamp(1rem, 2vw + 0.25rem, 2rem);
-    --fs-500: clamp(1.25rem, 2vw, 1.75rem);
+    --fs-500: clamp(1rem, 2vw, 1.75rem);
     --fs-400: clamp(0.9375rem, 1vw + 0.25rem, 1.125rem);
     --fs-300: clamp(0.875rem, 1vw, 1rem);
     --fs-200: clamp(0.75rem, 0.8vw, 0.875rem);
@@ -123,43 +123,6 @@
     padding-inline: 2em; /* top, botton are 0 and right, left are 2rem */
     margin-inline: auto; /* top, botton are 0 and right, left are auto */
     max-width: 60rem;
-  }
-
-  .grid-container {
-    text-align: center;
-    display: grid;
-    place-items: center;
-    /* place-content: center;
-    row-gap: 10%; */
-    padding-inline: 1rem;
-  }
-
-  .grid-container * {
-    max-width: 50ch;
-  }
-
-  @media (min-width: 45em) {
-    .grid-container {
-      text-align: left;
-      column-gap: var(--container-gap, 2rem);
-      grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0px, 40rem)) minmax(
-          1rem,
-          1fr
-        );
-    }
-
-    .grid-container > *:first-child {
-      grid-column: 2;
-    }
-
-    .grid-container > *:last-child {
-      grid-column: 3;
-    }
-
-    .grid-container--home {
-      padding-bottom: max(6rem, 10vh);
-      align-items: end;
-    }
   }
 
   /* screen readers */
@@ -314,6 +277,14 @@
     transform: scale(1.5);
   }
 
+  @media (max-width: 35em) {
+    .large-button:hover::after,
+    .large-button:focus::after {
+      opacity: 1;
+      transform: scale(1.25);
+    }
+  }
+
   @layer header {
     .logo {
       margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
@@ -453,12 +424,10 @@
         }
       }
 
-      @media (min-width: 35rem) {
-        .underline-indicators > .active,
-        .underline-indicators > [aria-selected="true"] {
-          color: hsl(var(--clr-white) / 1);
-          border-color: hsl(var(--clr-white) / 1);
-        }
+      .underline-indicators > .active,
+      .underline-indicators > [aria-selected="true"] {
+        color: hsl(var(--clr-white) / 1);
+        border-color: hsl(var(--clr-white) / 1);
       }
     }
 
@@ -547,6 +516,7 @@
     }
   }
 }
+
 
 @layer page-specific-bg {
   body {
