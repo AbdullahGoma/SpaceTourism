@@ -118,6 +118,10 @@
     margin-top: var(--flow-space, 1rem);
   }
 
+  .flow--space-small {
+    --flow-space: .75rem;
+  }
+
   /* wrapper */
   .container {
     padding-inline: 2em; /* top, botton are 0 and right, left are 2rem */
@@ -409,9 +413,10 @@
     @layer underline-indicator {
       .underline-indicators > * {
         cursor: pointer;
-        padding: var(--underline-gap, 1rem) 0;
+        padding: var(--underline-gap, 0.5rem) 0;
         border: 0;
         border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+        background-color: transparent;
       }
 
       .underline-indicators > *:focus {
@@ -575,7 +580,7 @@
 
     /* Crew */
     .grid-container--crew {
-      --flow-space: 3rem;
+      --flow-space: 2rem;
       grid-template-areas:
         "title"
         "image"
@@ -595,6 +600,10 @@
 
     .grid-container--crew > .crew-info {
       grid-area: content;
+
+      h2 {
+        color: hsl(var(--clr-white) / 0.5);
+      }
     }
 
     @media (min-width: 35em) {
@@ -667,6 +676,7 @@
       /* Crew */
       /* Crew */
       .grid-container--crew {
+      margin-left: 4rem;
         grid-template-areas:
           ". title image ."
           ". content image ."
@@ -675,16 +685,20 @@
 
       .grid-container--crew > .dot-indicators {
         justify-self: start;
+        margin-bottom: 2rem;
       }
 
       .grid-container--crew > img {
         align-self: end;
+        height: 70vh;
+        width: 100%;
+        object-fit: contain;
       }
     }
   }
 }
 
-@layer page-specific-bg {
+@layer home-page-bg {
   body {
     background-size: cover;
     background-position: bottom center;
@@ -709,6 +723,60 @@
     }
   }
 }
+
+@layer moon-page-bg {
+  body {
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  @layer destination {
+    .destination {
+      background-image: url(./assets/destination/background-destination-mobile.jpg);
+    }
+
+    @media (min-width: 35rem) {
+      .destination {
+        background-position: center center;
+        background-image: url(./assets/destination/background-destination-tablet.jpg);
+      }
+    }
+
+    @media (min-width: 45rem) {
+      .destination {
+        background-image: url(./assets/destination/background-destination-desktop.jpg);
+      }
+    }
+  }
+}
+
+
+@layer crew-page-bg {
+  body {
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  @layer crew {
+    .crew {
+      background-image: url(./assets/crew/background-crew-mobile.jpg);
+    }
+
+    @media (min-width: 35rem) {
+      .crew {
+        background-position: center center;
+        background-image: url(./assets/crew/background-crew-tablet.jpg);
+      }
+    }
+
+    @media (min-width: 45rem) {
+      .crew {
+        background-image: url(./assets/crew/background-crew-desktop.jpg);
+      }
+    }
+  }
+}
+
 
 @layer stop-animation-fire-swap {
   .resizing * {
