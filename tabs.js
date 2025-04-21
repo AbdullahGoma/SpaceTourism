@@ -35,6 +35,7 @@ function changeTabFocus(event) {
 function changeTabPannel(event) {
   const targetTab = event.target;
   const targetPanel = targetTab.getAttribute("aria-controls");
+  const targetImage = targetTab.getAttribute("data-image");
   const tabContainer = targetTab.parentNode;
   const mainContainer = tabContainer.parentNode;
 
@@ -44,5 +45,11 @@ function changeTabPannel(event) {
     .querySelectorAll('[role="tabpanel"]')
     .forEach((panel) => panel.setAttribute("hidden", true));
   mainContainer.querySelector([`#${targetPanel}`]).removeAttribute("hidden"); // ex: #mars-tab
- 
+
+  // Image
+  mainContainer
+    .querySelectorAll("picture")
+    .forEach((picture) => picture.setAttribute("hidden", true));
+  mainContainer.querySelector([`#${targetImage}`]).removeAttribute("hidden");
+
 }

@@ -77,7 +77,7 @@
       </h1>
 
       <!-- Moon -->
-      <picture>
+      <picture id="moon-image">
         <source
           srcset="/assets/destination/image-moon.webp"
           type="image/webp"
@@ -86,7 +86,7 @@
       </picture>
 
       <!-- Mars -->
-      <picture hidden>
+      <picture id="mars-image" hidden>
         <source
           srcset="/assets/destination/image-mars.webp"
           type="image/webp"
@@ -95,7 +95,7 @@
       </picture>
 
       <!-- Europa -->
-      <picture hidden>
+      <picture id="europa-image" hidden>
         <source
           srcset="/assets/destination/image-europa.webp"
           type="image/webp"
@@ -104,7 +104,7 @@
       </picture>
 
       <!-- Titan -->
-      <picture hidden>
+      <picture id="titan-image" hidden>
         <source
           srcset="/assets/destination/image-titan.webp"
           type="image/webp"
@@ -119,6 +119,7 @@
           role="tab"
           aria-controls="moon-tab"
           tabindex="0"
+          data-image="moon-image"
         >
           Moon
         </button>
@@ -128,6 +129,7 @@
           role="tab"
           aria-controls="mars-tab"
           tabindex="-1"
+          data-image="mars-image"
         >
           Mars
         </button>
@@ -137,6 +139,7 @@
           role="tab"
           aria-controls="europa-tab"
           tabindex="-1"
+          data-image="europa-image"
         >
           Europa
         </button>
@@ -146,6 +149,7 @@
           role="tab"
           aria-controls="titan-tab"
           tabindex="-1"
+          data-image="titan-image"
         >
           Titan
         </button>
