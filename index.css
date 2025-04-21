@@ -94,6 +94,11 @@
 }
 
 @layer utility {
+  /* very important if we use filer with grid, because grid makes it hidden by default  */
+  [hidden] {
+    display: none;
+  }
+  
   .flex {
     display: flex;
     gap: var(--gap, 1rem);
