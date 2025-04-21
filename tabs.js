@@ -33,11 +33,16 @@ function changeTabFocus(event) {
 }
 
 function changeTabPannel(event) {
-    const targetTab = event.target;
-    const targetPanel = targetTab.getAttribute("aria-controls");
-    const tabContainer = targetTab.parentNode;
-    const mainContainer = tabContainer.parentNode;
+  const targetTab = event.target;
+  const targetPanel = targetTab.getAttribute("aria-controls");
+  const tabContainer = targetTab.parentNode;
+  const mainContainer = tabContainer.parentNode;
 
-    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
-    
+  // Hiding the previous tab
+  // Article
+  mainContainer
+    .querySelectorAll('[role="tabpanel"]')
+    .forEach((panel) => panel.setAttribute("hidden", true));
+  mainContainer.querySelector([`#${targetPanel}`]).removeAttribute("hidden"); // ex: #mars-tab
+ 
 }
