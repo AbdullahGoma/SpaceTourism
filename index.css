@@ -488,8 +488,8 @@
       cursor: pointer;
       border: 1px solid hsl(var(--clr-white) / 0.1);
       border-radius: 50%;
-      width: 3rem;
-      height: 3rem;
+      width: var(--numbers-indicators-w-h, 3rem);
+      height: var(--numbers-indicators-w-h, 3rem);
       background-color: hsl(var(--clr-white) / 0);
       color: hsl(var(--clr-white));
     }
@@ -671,6 +671,11 @@
           "tabs"
           "image";
       }
+
+      /* technology */
+      .grid-container--technology > .numbers-indicators {
+        --numbers-indicators-w-h: 4rem;
+      }
     }
 
     @media (min-width: 45em) {
@@ -740,11 +745,13 @@
 
       /* technology */
       .grid-container--technology > .numbers-indicators {
+        --numbers-indicators-w-h: 5rem;
         flex-direction: column;
-        margin-left: 10rem;
+        margin-left: 12rem;
       }
 
       .grid-container--technology {
+        padding-bottom: 0;
         justify-content: space-between;
         grid-template-areas:
           ". title title ."
@@ -753,7 +760,7 @@
       }
 
       .grid-container--technology > .technology-info {
-        margin-left: 10rem;
+        margin-left: 9rem;
       }
 
       .grid-container--technology > picture {
@@ -761,6 +768,7 @@
         align-self: end;
         height: auto; 
         object-fit: contain; 
+        padding: 0 0 5rem 5rem;
       }
 
       .technology-md-screen {
