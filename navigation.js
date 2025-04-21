@@ -42,7 +42,6 @@ const resizeObserver = new ResizeObserver(() => {
 
 resizeObserver.observe(document.body);
 
-
 // Set active navigation link based on current page
 const currentPage = window.location.pathname.split("/").pop();
 
@@ -50,13 +49,15 @@ document.querySelectorAll("#primary-navigation li").forEach((navItem) => {
   const link = navItem.querySelector("a");
   const href = link.getAttribute("href");
 
-  console.log(href);
-  console.log(currentPage);
-  
-
-  if (href === currentPage || (href === "index.html" && currentPage === "")) {
+  if (
+    href === currentPage ||
+    href === `/${currentPage}` ||
+    (href === "/" && currentPage === "/index.html")
+  ) {
     // Remove current active
-    document.querySelector("#primary-navigation li.active")?.classList.remove("active");
+    document
+      .querySelector("#primary-navigation li.active")
+      ?.classList.remove("active");
     // Set new active
     navItem.classList.add("active");
   }
