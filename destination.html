@@ -112,33 +112,44 @@
         <img src="/assets/destination/image-titan.png" alt="Titan" />
       </picture>
 
-      <div class="flex tab-list underline-indicators">
+      <div class="flex tab-list underline-indicators" role="tablist" aria-label="destination list">
         <button
           aria-selected="true"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
+          aria-controls="moon-tab"
+          tabindex="0"
         >
           Moon
         </button>
         <button
           aria-selected="false"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
+          aria-controls="mars-tab"
+          tabindex="-1"
         >
           Mars
         </button>
         <button
           aria-selected="false"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
+          aria-controls="europa-tab"
+          tabindex="-1"
         >
           Europa
         </button>
         <button
           aria-selected="false"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
+          aria-controls="titan-tab"
+          tabindex="-1"
         >
           Titan
         </button>
       </div>
-
 
       <!-- Moon -->
       <article class="destination-info flow">
@@ -192,9 +203,9 @@
         <h2 class="fs-800 uppercase ff-serif">Europa</h2>
 
         <p>
-          The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
-          winter lover's dream. With an icy surface, it's perfect for a bit of 
-          ice skating, curling, hockey, or simple relaxation in your snug 
+          The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+          winter lover's dream. With an icy surface, it's perfect for a bit of
+          ice skating, curling, hockey, or simple relaxation in your snug
           wintery cabin.
         </p>
 
@@ -236,5 +247,6 @@
     </main>
 
     <script src="navigation.js" defer></script>
+    <script src="tabs.js" defer></script>
   </body>
 </html>
