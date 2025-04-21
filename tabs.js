@@ -62,6 +62,12 @@ function changeTabPannel(event) {
   hideContent(mainContainer, "picture");
   showContent(mainContainer, [`#${targetImage}`]);
 
+  // Only show large image if we're on the technology page
+  if (window.location.pathname.includes("technology")) {
+    const targetLargeImage = targetTab.getAttribute("data-image-lg");
+    showContent(mainContainer, [`#${targetLargeImage}`]);
+  }
+
   // active tag
   tabContainer
     .querySelector('[aria-selected="true"]')

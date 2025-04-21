@@ -96,7 +96,7 @@
 @layer utility {
   /* very important if we use filer with grid, because grid makes it hidden by default  */
   [hidden] {
-    display: none;
+    display: none !important;
   }
   
   .flex {
@@ -525,7 +525,7 @@
     .numbers-indicators > [aria-selected="true"]:hover::after,
     .numbers-indicators > [aria-selected="true"]:focus::after {
       opacity: 1;
-      transform: scale(1.5);
+      transform: scale(1.2);
     }
   }
 }
