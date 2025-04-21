@@ -50,6 +50,10 @@ document.querySelectorAll("#primary-navigation li").forEach((navItem) => {
   const link = navItem.querySelector("a");
   const href = link.getAttribute("href");
 
+  console.log(href);
+  console.log(currentPage);
+  
+
   if (href === currentPage || (href === "index.html" && currentPage === "")) {
     // Remove current active
     document.querySelector("#primary-navigation li.active")?.classList.remove("active");
