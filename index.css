@@ -766,8 +766,8 @@
       .grid-container--technology > picture {
         justify-self: end;
         align-self: end;
-        height: auto; 
-        object-fit: contain; 
+        height: auto;
+        object-fit: contain;
         padding: 0 0 5rem 5rem;
       }
 
@@ -838,6 +838,7 @@
   body {
     background-size: cover;
     background-position: bottom center;
+    background-repeat: no-repeat;
   }
 
   @layer crew {
