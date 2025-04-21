@@ -1,8 +1,10 @@
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
 
+// Change the tab focus when focus by keyboard
 tabList.addEventListener("keydown", changeTabFocus);
 
+// Change the tab when it clicked
 tabs.forEach((tab) => {
   tab.addEventListener("click", changeTabPannel);
 });
@@ -52,4 +54,7 @@ function changeTabPannel(event) {
     .forEach((picture) => picture.setAttribute("hidden", true));
   mainContainer.querySelector([`#${targetImage}`]).removeAttribute("hidden");
 
+  // active tag
+  tabContainer.querySelector('[aria-selected="true"]').setAttribute("aria-selected", false);
+  targetTab.setAttribute("aria-selected", true);
 }

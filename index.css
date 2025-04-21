@@ -98,10 +98,6 @@
   [hidden] {
     display: none;
   }
-
-  [role="tab"]:focus {
-    color: limegreen;
-  }
   
   .flex {
     display: flex;
