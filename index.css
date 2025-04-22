@@ -743,9 +743,7 @@
 
       .grid-container--crew > picture {
         align-self: end;
-        height: 70vh;
         width: 100%;
-        object-fit: contain;
       }
 
       /* technology */
