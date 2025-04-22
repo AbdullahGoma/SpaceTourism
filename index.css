@@ -98,7 +98,7 @@
   [hidden] {
     display: none !important;
   }
-  
+
   .flex {
     display: flex;
     gap: var(--gap, 1rem);
@@ -752,10 +752,19 @@
       .grid-container--technology > .numbers-indicators {
         --numbers-indicators-w-h: 5rem;
         flex-direction: column;
-        margin-left: 12rem;
+        margin-left: 10rem;
       }
 
+      
+    .grid-container--technology .numbered-title {
+      margin-left: -3rem;
+    }
+
       .grid-container--technology {
+        grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(
+            0,
+            20rem
+          ) minmax(1rem, 1fr);
         padding-bottom: 0;
         justify-content: space-between;
         grid-template-areas:
@@ -765,7 +774,7 @@
       }
 
       .grid-container--technology > .technology-info {
-        margin-left: 9rem;
+        margin-left: 6rem;
       }
 
       .grid-container--technology > picture {
